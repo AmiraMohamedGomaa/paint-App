@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/toolbar"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/pencil"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:elevation="@dimen/_10sdp"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/ic_pencil"
+           />
+
+        <ImageButton
+            android:id="@+id/arrow"
+            android:elevation="@dimen/_10sdp"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/_8sdp"
+            android:background="@drawable/ic_arrow" />
+
+        <ImageButton
+            android:id="@+id/circle"
+            android:elevation="@dimen/_10sdp"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginLeft="@dimen/_8sdp"
+            android:background="@drawable/circle" />
+
+        <ImageButton
+            android:id="@+id/rectangle"
+            android:layout_width="@dimen/_45sdp"
+            android:elevation="@dimen/_10sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginLeft="@dimen/_8sdp"
+            android:background="@drawable/rectangle" />
+
+        <ImageButton
+            android:id="@+id/palet"
+            android:layout_width="@dimen/_50sdp"
+            android:elevation="@dimen/_10sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:background="@drawable/ic_baseline_color_" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/color_layout"
+        android:visibility="gone"
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_below="@+id/toolbar"
+        android:padding="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:background="@drawable/toolbar"
+        android:layout_alignParentEnd="true"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/whiteBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/_2sdp"
+            android:layout_weight="1"
+            android:background="@drawable/red_background"
+            android:backgroundTint="@color/white" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/redBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/_2sdp"
+            android:layout_weight="1"
+            android:background="@drawable/red_background"
+             />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/greenBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/_2sdp"
+            android:layout_weight="1"
+            android:background="@drawable/green_background" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bluetn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/_2sdp"
+            android:layout_weight="1"
+            android:background="@drawable/blue_background"
+             />
+
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/blackBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/_2sdp"
+            android:layout_weight="1"
+            android:background="@drawable/black_background"
+             />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/color_layout">
+
+        <include layout="@layout/paint_view" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
